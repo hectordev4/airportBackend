@@ -16,4 +16,7 @@ public interface FlightRepository extends JpaRepository<Flight, Long> {
 
     List<Flight> findByArrivalTimeContaining(String arrivalTime);
 
+    List<Flight> findByDepartureAirport_Id(Long departureAirportId);
+
+    List<Flight> findByArrivalAirport_Id(Long arrivalAirportId);
 }

@@ -46,4 +46,11 @@ public class FlightService {
         return flightRepository.count();
     }
 
+    public List<Flight> findByDepartureAirport(Long departureAirportId) {
+        return flightRepository.findByDepartureAirport_Id(departureAirportId);
+    }
+
+    public List<Flight> findByArrivalAirport(Long arrivalAirportId) {
+        return flightRepository.findByArrivalAirport_Id(arrivalAirportId);
+    }
 }

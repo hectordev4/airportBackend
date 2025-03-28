@@ -22,8 +22,11 @@ public class Airport {
     private String city;
     private String country;
 
-    @OneToMany(mappedBy = "airport")
-    private List<Flight> flights;
+    @OneToMany(mappedBy = "departureAirport")
+    private List<Flight> flightsDeparture;
+
+    @OneToMany(mappedBy = "arrivalAirport")
+    private List<Flight> flightsArrival;
 
     @Override
     public String toString() {
