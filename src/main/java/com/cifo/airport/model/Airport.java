@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -21,6 +20,9 @@ public class Airport {
     private String name;
     private String city;
     private String country;
+    private String code;
+    private String phoneNumber;
+    private String email;
 
     @OneToMany(mappedBy = "departureAirport")
     private List<Flight> flightsDeparture;
@@ -35,6 +37,9 @@ public class Airport {
                 ", name='" + name + '\'' +
                 ", city='" + city + '\'' +
                 ", country='" + country + '\'' +
+                ", code='" + code + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }
