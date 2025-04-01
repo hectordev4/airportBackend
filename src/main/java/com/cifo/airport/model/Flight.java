@@ -1,5 +1,6 @@
 package com.cifo.airport.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,16 +27,21 @@ public class Flight {
     private FlightStatus status;
 
     @ManyToOne
-    @JoinColumn(name = "departure_airport_code", nullable = false)
+    @JsonIgnore
+    @JoinColumn(name = "departure_airport_id", referencedColumnName = "id")
     private Airport departureAirport;
 
     @ManyToOne
-    @JoinColumn(name = "arrival_airport_code", nullable = false)
+    @JsonIgnore
+    @JoinColumn(name = "arrival_airport_id", referencedColumnName = "id")
     private Airport arrivalAirport;
 
     @ManyToOne
-    @JoinColumn(name = "plane_registration_number", nullable = false)
+    @JsonIgnore
+    @JoinColumn(name = "plane_id", referencedColumnName = "id")
     private Plane plane;
+
+
 
     @Override
     public String toString() {
