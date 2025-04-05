@@ -1,4 +1,4 @@
-package com.cifo.airport.model;
+package com.cifo.airport.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,5 +14,5 @@ public class FlightDTO {
     private String departureAirportCode;
     private String arrivalAirportCode;
     private String planeRegistrationNumber;
-}
 
+}

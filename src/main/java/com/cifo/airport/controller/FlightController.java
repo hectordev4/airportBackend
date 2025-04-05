@@ -1,7 +1,7 @@
 package com.cifo.airport.controller;
 
 import com.cifo.airport.model.Flight;
-import com.cifo.airport.model.FlightDTO;  // Import the FlightDTO
+import com.cifo.airport.dto.FlightDTO;  // Import the FlightDTO
 import com.cifo.airport.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

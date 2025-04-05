@@ -1,5 +1,6 @@
 package com.cifo.airport.controller;
 
+import com.cifo.airport.dto.AirportDTO;
 import com.cifo.airport.model.Airport;
 import com.cifo.airport.service.AirportService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/airports")
@@ -17,8 +19,30 @@ public class AirportController {
     private AirportService airportService;
 
     @GetMapping
-    public List<Airport> findAll() {
-        return airportService.findAll();
+    public List<AirportDTO> findAll() {
+        List<Airport> airports = airportService.findAll();
+
+        // Map the Airport objects to AirportDTO
+        return airports.stream().map(airport -> {
+            List<String> departureFlightNumbers = airport.getFlightsDeparture().stream()
+                    .map(flight -> flight.getFlightNumber())
+                    .collect(Collectors.toList());
+            List<String> arrivalFlightNumbers = airport.getFlightsArrival().stream()
+                    .map(flight -> flight.getFlightNumber())
+                    .collect(Collectors.toList());
+
+            return new AirportDTO(
+                    airport.getId(),
+                    airport.getName(),
+                    airport.getCity(),
+                    airport.getCountry(),
+                    airport.getCode(),
+                    airport.getPhoneNumber(),
+                    airport.getEmail(),
+                    departureFlightNumbers,
+                    arrivalFlightNumbers
+            );
+        }).collect(Collectors.toList());
     }
 
     @GetMapping("/{id}")
