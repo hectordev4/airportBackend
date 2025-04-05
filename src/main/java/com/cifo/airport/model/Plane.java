@@ -1,8 +1,10 @@
 package com.cifo.airport.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
@@ -25,6 +27,7 @@ public class Plane {
     private Integer yearOfManufacture;
 
     @OneToMany(mappedBy = "plane")
+    @JsonIgnore
     private List<Flight> flights;
 
     @Override

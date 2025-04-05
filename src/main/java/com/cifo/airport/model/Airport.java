@@ -1,8 +1,10 @@
 package com.cifo.airport.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
@@ -25,9 +27,11 @@ public class Airport {
     private String email;
 
     @OneToMany(mappedBy = "departureAirport")
+    @JsonIgnore
     private List<Flight> flightsDeparture;
 
     @OneToMany(mappedBy = "arrivalAirport")
+    @JsonIgnore
     private List<Flight> flightsArrival;
 
     @Override

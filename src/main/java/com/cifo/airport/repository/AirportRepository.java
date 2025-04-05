@@ -14,4 +14,9 @@ public interface AirportRepository extends JpaRepository<Airport, Long> {
 
     List<Airport> findByCountryContaining(String country);
 
+    List<Airport> findByCodeContaining(String code);
+
+    List<Airport> findByPhoneNumberContaining(String phoneNumber);
+
+    List<Airport> findByEmailContaining(String email);
 }

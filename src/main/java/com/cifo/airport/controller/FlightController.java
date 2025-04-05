@@ -1,6 +1,7 @@
 package com.cifo.airport.controller;
 
 import com.cifo.airport.model.Flight;
+import com.cifo.airport.model.FlightDTO;  // Import the FlightDTO
 import com.cifo.airport.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/flights")
@@ -17,8 +19,26 @@ public class FlightController {
     private FlightService flightService;
 
     @GetMapping
-    public List<Flight> findAll() {
-        return flightService.findAll();
+    public List<FlightDTO> findAll() {
+        List<Flight> flights = flightService.findAll();
+
+        // Map the Flight objects to FlightDTO
+        return flights.stream().map(flight -> {
+            String departureAirportCode = flight.getDepartureAirport().getCode();
+            String arrivalAirportCode = flight.getArrivalAirport().getCode();
+            String planeRegistrationNumber = flight.getPlane().getRegistrationNumber();
+
+            return new FlightDTO(
+                    flight.getId(),
+                    flight.getFlightNumber(),
+                    flight.getDepartureTime(),
+                    flight.getArrivalTime(),
+                    flight.getStatus().toString(),
+                    departureAirportCode,
+                    arrivalAirportCode,
+                    planeRegistrationNumber
+            );
+        }).collect(Collectors.toList());
     }
 
     @GetMapping("/{id}")
