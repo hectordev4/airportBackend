@@ -142,3 +142,309 @@ VALUES
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-04-10 12:01:25.219271+02:00 database: wrong user or password; user: "HECTOR"
+org.h2.message.DbException: Wrong user name or password [28000-224]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.engine.Engine.openSession(Engine.java:154)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:811)
+	at org.h2.server.web.WebApp.login(WebApp.java:1039)
+	at org.h2.server.web.WebApp.process(WebApp.java:227)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name or password [28000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:522)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 50 more
+2025-04-10 13:19:46.690308+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "([*]11, 'Madrid', 'Spain', 'Adolfo Suárez Madrid–Barajas Airport', 'MAD', '+34 913-936-010', 'info@madrid-airport.com'),\000d\000a(12, 'Rome', 'Italy', 'Leonardo da Vinci–Fiumicino Airport', 'FCO', '+39 06 65951', 'info@fuimicino.com'),\000d\000a(13, 'Toronto', 'Canada', 'Toronto Pearson International Airport', 'YYZ', '+1 416-247-7678', 'info@torontopearson.com'),\000d\000a(14, 'Beijing', 'China', 'Beijing Capital International Airport', 'PEK', '+86 10 6459 3516', 'info@bjairport.com'),\000d\000a(15, 'Mexico City', 'Mexico', 'Mexico City International Airport', 'MEX', '+52 55 2482 2800', 'info@aicm.com.mx'),\000d\000a(16, 'São Paulo', 'Brazil', 'São Paulo–Guarulhos International Airport', 'GRU', '+55 11 2445-2945', 'contact@gru.com.br'),\000d\000a(17, 'Istanbul', 'Turkey', 'Istanbul Airport', 'IST', '+90 212 444 8080', 'info@istanbulairport.aero'),\000d\000a(18, 'Amsterdam', 'Netherlands', 'Amsterdam Schiphol Airport', 'AMS', '+31 20 794 0800', 'info@schiphol.nl'),\000d\000a(19, 'Seoul', 'South Korea', 'Incheon International Airport', 'ICN', '+82 32 746 0114', 'info@airport.kr'),\000d\000a(20, 'Bangkok', 'Thailand', 'Suvarnabhumi Airport', 'BKK', '+66 2 132 1888', 'info@suvarnabhumi.com')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(11, 'Madrid', 'Spain', 'Adolfo Suárez Madrid–Barajas Airport', 'MAD', '+34 913-936-010', 'info@madrid-airport.com'),
+(12, 'Rome', 'Italy', 'Leonardo da Vinci–Fiumicino Airport', 'FCO', '+39 06 65951', 'info@fuimicino.com'),
+(13, 'Toronto', 'Canada', 'Toronto Pearson International Airport', 'YYZ', '+1 416-247-7678', 'info@torontopearson.com'),
+(14, 'Beijing', 'China', 'Beijing Capital International Airport', 'PEK', '+86 10 6459 3516', 'info@bjairport.com'),
+(15, 'Mexico City', 'Mexico', 'Mexico City International Airport', 'MEX', '+52 55 2482 2800', 'info@aicm.com.mx'),
+(16, 'São Paulo', 'Brazil', 'São Paulo–Guarulhos International Airport', 'GRU', '+55 11 2445-2945', 'contact@gru.com.br'),
+(17, 'Istanbul', 'Turkey', 'Istanbul Airport', 'IST', '+90 212 444 8080', 'info@istanbulairport.aero'),
+(18, 'Amsterdam', 'Netherlands', 'Amsterdam Schiphol Airport', 'AMS', '+31 20 794 0800', 'info@schiphol.nl'),
+(19, 'Seoul', 'South Korea', 'Incheon International Airport', 'ICN', '+82 32 746 0114', 'info@airport.kr'),
+(20, 'Bangkok', 'Thailand', 'Suvarnabhumi Airport', 'BKK', '+66 2 132 1888', 'info@suvarnabhumi.com') [42001-224]
+2025-04-10 13:20:12.727875+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "([*]11, 'Madrid', 'Spain', 'Adolfo Suárez Madrid–Barajas Airport', 'MAD', '+34 913-936-010', 'info@madrid-airport.com'),\000d\000a(12, 'Rome', 'Italy', 'Leonardo da Vinci–Fiumicino Airport', 'FCO', '+39 06 65951', 'info@fuimicino.com'),\000d\000a(13, 'Toronto', 'Canada', 'Toronto Pearson International Airport', 'YYZ', '+1 416-247-7678', 'info@torontopearson.com'),\000d\000a(14, 'Beijing', 'China', 'Beijing Capital International Airport', 'PEK', '+86 10 6459 3516', 'info@bjairport.com'),\000d\000a(15, 'Mexico City', 'Mexico', 'Mexico City International Airport', 'MEX', '+52 55 2482 2800', 'info@aicm.com.mx'),\000d\000a(16, 'São Paulo', 'Brazil', 'São Paulo–Guarulhos International Airport', 'GRU', '+55 11 2445-2945', 'contact@gru.com.br'),\000d\000a(17, 'Istanbul', 'Turkey', 'Istanbul Airport', 'IST', '+90 212 444 8080', 'info@istanbulairport.aero'),\000d\000a(18, 'Amsterdam', 'Netherlands', 'Amsterdam Schiphol Airport', 'AMS', '+31 20 794 0800', 'info@schiphol.nl'),\000d\000a(19, 'Seoul', 'South Korea', 'Incheon International Airport', 'ICN', '+82 32 746 0114', 'info@airport.kr'),\000d\000a(20, 'Bangkok', 'Thailand', 'Suvarnabhumi Airport', 'BKK', '+66 2 132 1888', 'info@suvarnabhumi.com')"; expected "(, SELECT, TABLE, VALUES"; SQL statement:
+(11, 'Madrid', 'Spain', 'Adolfo Suárez Madrid–Barajas Airport', 'MAD', '+34 913-936-010', 'info@madrid-airport.com'),
+(12, 'Rome', 'Italy', 'Leonardo da Vinci–Fiumicino Airport', 'FCO', '+39 06 65951', 'info@fuimicino.com'),
+(13, 'Toronto', 'Canada', 'Toronto Pearson International Airport', 'YYZ', '+1 416-247-7678', 'info@torontopearson.com'),
+(14, 'Beijing', 'China', 'Beijing Capital International Airport', 'PEK', '+86 10 6459 3516', 'info@bjairport.com'),
+(15, 'Mexico City', 'Mexico', 'Mexico City International Airport', 'MEX', '+52 55 2482 2800', 'info@aicm.com.mx'),
+(16, 'São Paulo', 'Brazil', 'São Paulo–Guarulhos International Airport', 'GRU', '+55 11 2445-2945', 'contact@gru.com.br'),
+(17, 'Istanbul', 'Turkey', 'Istanbul Airport', 'IST', '+90 212 444 8080', 'info@istanbulairport.aero'),
+(18, 'Amsterdam', 'Netherlands', 'Amsterdam Schiphol Airport', 'AMS', '+31 20 794 0800', 'info@schiphol.nl'),
+(19, 'Seoul', 'South Korea', 'Incheon International Airport', 'ICN', '+82 32 746 0114', 'info@airport.kr'),
+(20, 'Bangkok', 'Thailand', 'Suvarnabhumi Airport', 'BKK', '+66 2 132 1888', 'info@suvarnabhumi.com') [42001-224]
+2025-04-10 13:21:23.351047+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "REGISTRATIONNUMBER" not found; SQL statement:
+INSERT INTO planes (id, model, manufacturer, registrationNumber, capacity, yearOfManufacture)
+VALUES
+(101, 'Boeing 737', 'Boeing', 'N737AA', 180, 2018),
+(102, 'Airbus A320', 'Airbus', 'N320DL', 150, 2020),
+(103, 'Boeing 787', 'Boeing', 'N787BA', 250, 2019),
+(104, 'Airbus A350', 'Airbus', 'N350UA', 300, 2021),
+(105, 'Boeing 747', 'Boeing', 'N747LH', 400, 2017),
+(106, 'Airbus A330', 'Airbus', 'N330AF', 250, 2019),
+(107, 'Boeing 767', 'Boeing', 'N767EK', 250, 2020),
+(108, 'Airbus A380', 'Airbus', 'N380QR', 500, 2022),
+(109, 'Boeing 757', 'Boeing', 'N757SQ', 200, 2018),
+(110, 'Airbus A321', 'Airbus', 'N321JL', 230, 2021),
+(111, 'Boeing 737', 'Boeing', 'N737AA2', 180, 2018),
+(112, 'Airbus A320', 'Airbus', 'N320DL2', 150, 2020),
+(113, 'Boeing 787', 'Boeing', 'N787BA2', 250, 2019),
+(114, 'Airbus A350', 'Airbus', 'N350UA2', 300, 2021),
+(115, 'Boeing 747', 'Boeing', 'N747LH2', 400, 2017),
+(116, 'Airbus A330', 'Airbus', 'N330AF2', 250, 2019),
+(117, 'Boeing 767', 'Boeing', 'N767EK2', 250, 2020),
+(118, 'Airbus A380', 'Airbus', 'N380QR2', 500, 2022),
+(119, 'Boeing 757', 'Boeing', 'N757SQ2', 200, 2018),
+(120, 'Airbus A321', 'Airbus', 'N321JL2', 230, 2021),
+(121, 'Boeing 737', 'Boeing', 'N737AA3', 180, 2018),
+(122, 'Airbus A320', 'Airbus', 'N320DL3', 150, 2020),
+(123, 'Boeing 787', 'Boeing', 'N787BA3', 250, 2019),
+(124, 'Airbus A350', 'Airbus', 'N350UA3', 300, 2021),
+(125, 'Boeing 747', 'Boeing', 'N747LH3', 400, 2017),
+(126, 'Airbus A330', 'Airbus', 'N330AF3', 250, 2019),
+(127, 'Boeing 767', 'Boeing', 'N767EK3', 250, 2020),
+(128, 'Airbus A380', 'Airbus', 'N380QR3', 500, 2022),
+(129, 'Boeing 757', 'Boeing', 'N757SQ3', 200, 2018),
+(130, 'Airbus A321', 'Airbus', 'N321JL3', 230, 2021),
+(131, 'Boeing 737', 'Boeing', 'N737AA4', 180, 2018),
+(132, 'Airbus A320', 'Airbus', 'N320DL4', 150, 2020),
+(133, 'Boeing 787', 'Boeing', 'N787BA4', 250, 2019),
+(134, 'Airbus A350', 'Airbus', 'N350UA4', 300, 2021),
+(135, 'Boeing 747', 'Boeing', 'N747LH4', 400, 2017),
+(136, 'Airbus A330', 'Airbus', 'N330AF4', 250, 2019),
+(137, 'Boeing 767', 'Boeing', 'N767EK4', 250, 2020),
+(138, 'Airbus A380', 'Airbus', 'N380QR4', 500, 2022),
+(139, 'Boeing 757', 'Boeing', 'N757SQ4', 200, 2018),
+(140, 'Airbus A321', 'Airbus', 'N321JL4', 230, 2021),
+(141, 'Boeing 737', 'Boeing', 'N737AA5', 180, 2018),
+(142, 'Airbus A320', 'Airbus', 'N320DL5', 150, 2020),
+(143, 'Boeing 787', 'Boeing', 'N787BA5', 250, 2019),
+(144, 'Airbus A350', 'Airbus', 'N350UA5', 300, 2021),
+(145, 'Boeing 747', 'Boeing', 'N747LH5', 400, 2017),
+(146, 'Airbus A330', 'Airbus', 'N330AF5', 250, 2019),
+(147, 'Boeing 767', 'Boeing', 'N767EK5', 250, 2020),
+(148, 'Airbus A380', 'Airbus', 'N380QR5', 500, 2022),
+(149, 'Boeing 757', 'Boeing', 'N757SQ5', 200, 2018),
+(150, 'Airbus A321', 'Airbus', 'N321JL5', 230, 2021) [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp.query(WebApp.java:1119)
+	at org.h2.server.web.WebApp.process(WebApp.java:245)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-04-10 13:21:53.582585+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "REGISTRATION_OF_NUMBER" not found; SQL statement:
+INSERT INTO planes (id, model, manufacturer, registration_of_number, capacity, year_of_manufacture)
+VALUES
+(101, 'Boeing 737', 'Boeing', 'N737AA', 180, 2018),
+(102, 'Airbus A320', 'Airbus', 'N320DL', 150, 2020),
+(103, 'Boeing 787', 'Boeing', 'N787BA', 250, 2019),
+(104, 'Airbus A350', 'Airbus', 'N350UA', 300, 2021),
+(105, 'Boeing 747', 'Boeing', 'N747LH', 400, 2017),
+(106, 'Airbus A330', 'Airbus', 'N330AF', 250, 2019),
+(107, 'Boeing 767', 'Boeing', 'N767EK', 250, 2020),
+(108, 'Airbus A380', 'Airbus', 'N380QR', 500, 2022),
+(109, 'Boeing 757', 'Boeing', 'N757SQ', 200, 2018),
+(110, 'Airbus A321', 'Airbus', 'N321JL', 230, 2021),
+(111, 'Boeing 737', 'Boeing', 'N737AA2', 180, 2018),
+(112, 'Airbus A320', 'Airbus', 'N320DL2', 150, 2020),
+(113, 'Boeing 787', 'Boeing', 'N787BA2', 250, 2019),
+(114, 'Airbus A350', 'Airbus', 'N350UA2', 300, 2021),
+(115, 'Boeing 747', 'Boeing', 'N747LH2', 400, 2017),
+(116, 'Airbus A330', 'Airbus', 'N330AF2', 250, 2019),
+(117, 'Boeing 767', 'Boeing', 'N767EK2', 250, 2020),
+(118, 'Airbus A380', 'Airbus', 'N380QR2', 500, 2022),
+(119, 'Boeing 757', 'Boeing', 'N757SQ2', 200, 2018),
+(120, 'Airbus A321', 'Airbus', 'N321JL2', 230, 2021),
+(121, 'Boeing 737', 'Boeing', 'N737AA3', 180, 2018),
+(122, 'Airbus A320', 'Airbus', 'N320DL3', 150, 2020),
+(123, 'Boeing 787', 'Boeing', 'N787BA3', 250, 2019),
+(124, 'Airbus A350', 'Airbus', 'N350UA3', 300, 2021),
+(125, 'Boeing 747', 'Boeing', 'N747LH3', 400, 2017),
+(126, 'Airbus A330', 'Airbus', 'N330AF3', 250, 2019),
+(127, 'Boeing 767', 'Boeing', 'N767EK3', 250, 2020),
+(128, 'Airbus A380', 'Airbus', 'N380QR3', 500, 2022),
+(129, 'Boeing 757', 'Boeing', 'N757SQ3', 200, 2018),
+(130, 'Airbus A321', 'Airbus', 'N321JL3', 230, 2021),
+(131, 'Boeing 737', 'Boeing', 'N737AA4', 180, 2018),
+(132, 'Airbus A320', 'Airbus', 'N320DL4', 150, 2020),
+(133, 'Boeing 787', 'Boeing', 'N787BA4', 250, 2019),
+(134, 'Airbus A350', 'Airbus', 'N350UA4', 300, 2021),
+(135, 'Boeing 747', 'Boeing', 'N747LH4', 400, 2017),
+(136, 'Airbus A330', 'Airbus', 'N330AF4', 250, 2019),
+(137, 'Boeing 767', 'Boeing', 'N767EK4', 250, 2020),
+(138, 'Airbus A380', 'Airbus', 'N380QR4', 500, 2022),
+(139, 'Boeing 757', 'Boeing', 'N757SQ4', 200, 2018),
+(140, 'Airbus A321', 'Airbus', 'N321JL4', 230, 2021),
+(141, 'Boeing 737', 'Boeing', 'N737AA5', 180, 2018),
+(142, 'Airbus A320', 'Airbus', 'N320DL5', 150, 2020),
+(143, 'Boeing 787', 'Boeing', 'N787BA5', 250, 2019),
+(144, 'Airbus A350', 'Airbus', 'N350UA5', 300, 2021),
+(145, 'Boeing 747', 'Boeing', 'N747LH5', 400, 2017),
+(146, 'Airbus A330', 'Airbus', 'N330AF5', 250, 2019),
+(147, 'Boeing 767', 'Boeing', 'N767EK5', 250, 2020),
+(148, 'Airbus A380', 'Airbus', 'N380QR5', 500, 2022),
+(149, 'Boeing 757', 'Boeing', 'N757SQ5', 200, 2018),
+(150, 'Airbus A321', 'Airbus', 'N321JL5', 230, 2021) [42122-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.table.Table.getColumn(Table.java:759)
+	at org.h2.command.Parser.parseColumn(Parser.java:1190)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1175)
+	at org.h2.command.Parser.parseInsert(Parser.java:1549)
+	at org.h2.command.Parser.parsePrepared(Parser.java:719)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp.query(WebApp.java:1119)
+	at org.h2.server.web.WebApp.process(WebApp.java:245)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
