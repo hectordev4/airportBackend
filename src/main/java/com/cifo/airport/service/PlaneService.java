@@ -26,6 +26,10 @@ public class PlaneService {
         return planeRepository.save(plane);
     }
 
+    public List<Plane> saveAllPlanes(List<Plane> planes) {
+        return planeRepository.saveAll(planes);
+    }
+
     public void deleteById(Long id) {
         planeRepository.deleteById(id);
     }

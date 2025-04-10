@@ -1,4 +1,4 @@
-POST https://localhost:8081/api/airports
+POST http://localhost:8081/api/airports/batch
 Content-Type: application/json
 
 [
@@ -7,7 +7,7 @@ Content-Type: application/json
     "country": "USA",
     "name": "John F. Kennedy International Airport",
     "code": "JFK",
-    "phone_number": "+1 718-244-4444",
+    "phoneNumber": "+1 718-244-4444",
     "email": "info@jfkairport.com"
   },
   {
@@ -15,7 +15,7 @@ Content-Type: application/json
     "country": "USA",
     "name": "Los Angeles International Airport",
     "code": "LAX",
-    "phone_number": "+1 855-463-5252",
+    "phoneNumber": "+1 855-463-5252",
     "email": "contact@laxairport.com"
   },
   {
@@ -23,7 +23,7 @@ Content-Type: application/json
     "country": "UK",
     "name": "Heathrow Airport",
     "code": "LHR",
-    "phone_number": "+44 844 335 1801",
+    "phoneNumber": "+44 844 335 1801",
     "email": "info@heathrow.com"
   },
   {
@@ -31,7 +31,7 @@ Content-Type: application/json
     "country": "France",
     "name": "Charles de Gaulle Airport",
     "code": "CDG",
-    "phone_number": "+33 1 70 36 39 50",
+    "phoneNumber": "+33 1 70 36 39 50",
     "email": "contact@cdgairport.fr"
   },
   {
@@ -39,7 +39,7 @@ Content-Type: application/json
     "country": "Japan",
     "name": "Narita International Airport",
     "code": "NRT",
-    "phone_number": "+81 476-34-8000",
+    "phoneNumber": "+81 476-34-8000",
     "email": "info@narita-airport.jp"
   },
   {
@@ -47,7 +47,7 @@ Content-Type: application/json
     "country": "Australia",
     "name": "Sydney Kingsford Smith Airport",
     "code": "SYD",
-    "phone_number": "+61 2 9667 9111",
+    "phoneNumber": "+61 2 9667 9111",
     "email": "contact@sydneyairport.com.au"
   },
   {
@@ -55,7 +55,7 @@ Content-Type: application/json
     "country": "UAE",
     "name": "Dubai International Airport",
     "code": "DXB",
-    "phone_number": "+971 4 224 5555",
+    "phoneNumber": "+971 4 224 5555",
     "email": "info@dubaiairports.ae"
   },
   {
@@ -63,7 +63,7 @@ Content-Type: application/json
     "country": "China",
     "name": "Hong Kong International Airport",
     "code": "HKG",
-    "phone_number": "+852 2181 8888",
+    "phoneNumber": "+852 2181 8888",
     "email": "enquiry@hkairport.com"
   },
   {
@@ -71,7 +71,7 @@ Content-Type: application/json
     "country": "Germany",
     "name": "Berlin Brandenburg Airport",
     "code": "BER",
-    "phone_number": "+49 30 609160910",
+    "phoneNumber": "+49 30 609160910",
     "email": "info@berlin-airport.de"
   },
   {
@@ -79,7 +79,7 @@ Content-Type: application/json
     "country": "Singapore",
     "name": "Changi Airport",
     "code": "SIN",
-    "phone_number": "+65 6595 6868",
+    "phoneNumber": "+65 6595 6868",
     "email": "enquiries@changiairport.com"
   },
   {
@@ -87,7 +87,7 @@ Content-Type: application/json
     "country": "Spain",
     "name": "Adolfo Suárez Madrid–Barajas Airport",
     "code": "MAD",
-    "phone_number": "+34 913 211 000",
+    "phoneNumber": "+34 913 211 000",
     "email": "info@madrid-airport.es"
   },
   {
@@ -95,7 +95,7 @@ Content-Type: application/json
     "country": "Italy",
     "name": "Leonardo da Vinci–Fiumicino Airport",
     "code": "FCO",
-    "phone_number": "+39 06 65951",
+    "phoneNumber": "+39 06 65951",
     "email": "contact@fco.it"
   },
   {
@@ -103,7 +103,7 @@ Content-Type: application/json
     "country": "Canada",
     "name": "Toronto Pearson International Airport",
     "code": "YYZ",
-    "phone_number": "+1 416-247-7678",
+    "phoneNumber": "+1 416-247-7678",
     "email": "info@gtaa.com"
   },
   {
@@ -111,7 +111,7 @@ Content-Type: application/json
     "country": "China",
     "name": "Beijing Capital International Airport",
     "code": "PEK",
-    "phone_number": "+86 10 96158",
+    "phoneNumber": "+86 10 96158",
     "email": "service@bcia.com.cn"
   },
   {
@@ -119,7 +119,7 @@ Content-Type: application/json
     "country": "Mexico",
     "name": "Mexico City International Airport",
     "code": "MEX",
-    "phone_number": "+52 55 2482 2400",
+    "phoneNumber": "+52 55 2482 2400",
     "email": "contact@aicm.com.mx"
   },
   {
@@ -127,7 +127,7 @@ Content-Type: application/json
     "country": "Brazil",
     "name": "São Paulo–Guarulhos International Airport",
     "code": "GRU",
-    "phone_number": "+55 11 2445-2945",
+    "phoneNumber": "+55 11 2445-2945",
     "email": "info@gru.com.br"
   },
   {
@@ -135,7 +135,7 @@ Content-Type: application/json
     "country": "Turkey",
     "name": "Istanbul Airport",
     "code": "IST",
-    "phone_number": "+90 212 444 1442",
+    "phoneNumber": "+90 212 444 1442",
     "email": "info@istairport.com"
   },
   {
@@ -143,7 +143,7 @@ Content-Type: application/json
     "country": "Netherlands",
     "name": "Amsterdam Schiphol Airport",
     "code": "AMS",
-    "phone_number": "+31 20 794 0800",
+    "phoneNumber": "+31 20 794 0800",
     "email": "info@schiphol.nl"
   },
   {
@@ -151,7 +151,7 @@ Content-Type: application/json
     "country": "South Korea",
     "name": "Incheon International Airport",
     "code": "ICN",
-    "phone_number": "+82 32-741-0114",
+    "phoneNumber": "+82 32-741-0114",
     "email": "contact@airport.kr"
   },
   {
@@ -159,7 +159,7 @@ Content-Type: application/json
     "country": "Thailand",
     "name": "Suvarnabhumi Airport",
     "code": "BKK",
-    "phone_number": "+66 2132 1888",
+    "phoneNumber": "+66 2132 1888",
     "email": "info@airportthai.co.th"
   }
 ]

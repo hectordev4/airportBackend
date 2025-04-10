@@ -16,7 +16,12 @@ public class Flight {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "flight_seq")
-    @SequenceGenerator(name = "flight_seq", sequenceName = "flight_sequence", allocationSize = 1)
+    @SequenceGenerator(
+            name = "flight_seq",
+            sequenceName = "flight_sequence",
+            initialValue = 1,
+            allocationSize = 1
+    )
     private Long id;
     private String flightNumber;
     private String departureTime;

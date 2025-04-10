@@ -22,7 +22,7 @@ public class FlightController {
     public List<FlightDTO> findAll() {
         List<Flight> flights = flightService.findAll();
 
-        // Map the Flight objects to FlightDTO
+
         return flights.stream().map(flight -> {
             String departureAirportCode = flight.getDepartureAirport().getCode();
             String arrivalAirportCode = flight.getArrivalAirport().getCode();
@@ -54,6 +54,11 @@ public class FlightController {
     @PostMapping
     public ResponseEntity<Flight> create(@RequestBody Flight flight) {
         return ResponseEntity.ok(flightService.save(flight));
+    }
+
+    @PostMapping("/batch")
+    public ResponseEntity<List<Flight>> createFlights(@RequestBody List<Flight> flights) {
+        return ResponseEntity.ok(flightService.saveAllFlights(flights));
     }
 
     @PutMapping("/{id}")

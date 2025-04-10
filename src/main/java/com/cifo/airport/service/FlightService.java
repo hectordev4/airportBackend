@@ -26,6 +26,10 @@ public class FlightService {
         return flightRepository.save(flight);
     }
 
+    public List<Flight> saveAllFlights(List<Flight> flights) {
+        return flightRepository.saveAll(flights);
+    }
+
     public void deleteById(Long id) {
         flightRepository.deleteById(id);
     }

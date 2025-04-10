@@ -18,7 +18,12 @@ public class Airport {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "airport_seq")
-    @SequenceGenerator(name = "airport_seq", sequenceName = "airport_sequence", allocationSize = 1)
+    @SequenceGenerator(
+            name = "airport_seq",
+            sequenceName = "airport_sequence",
+            initialValue = 1,
+            allocationSize = 1
+    )
     private Long id;
     private String name;
     private String city;

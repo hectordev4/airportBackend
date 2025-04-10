@@ -2,6 +2,7 @@ package com.cifo.airport.controller;
 
 import com.cifo.airport.dto.AirportDTO;
 import com.cifo.airport.model.Airport;
+import com.cifo.airport.model.Flight;
 import com.cifo.airport.service.AirportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,13 +23,12 @@ public class AirportController {
     public List<AirportDTO> findAll() {
         List<Airport> airports = airportService.findAll();
 
-        // Map the Airport objects to AirportDTO
         return airports.stream().map(airport -> {
             List<String> departureFlightNumbers = airport.getFlightsDeparture().stream()
-                    .map(flight -> flight.getFlightNumber())
+                    .map(Flight::getFlightNumber)
                     .collect(Collectors.toList());
             List<String> arrivalFlightNumbers = airport.getFlightsArrival().stream()
-                    .map(flight -> flight.getFlightNumber())
+                    .map(Flight::getFlightNumber)
                     .collect(Collectors.toList());
 
             return new AirportDTO(
@@ -48,11 +48,8 @@ public class AirportController {
     @GetMapping("/{id}")
     public ResponseEntity<Airport> findById(@PathVariable Long id) {
         Optional<Airport> airport = airportService.findById(id);
-        if (airport.isPresent()) {
-            return ResponseEntity.ok(airport.get());
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+        return airport.map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping
@@ -60,25 +57,28 @@ public class AirportController {
         return ResponseEntity.ok(airportService.save(airport));
     }
 
+    @PostMapping("/batch")
+    public ResponseEntity<List<Airport>> createAirports(@RequestBody List<Airport> airports) {
+        return ResponseEntity.ok(airportService.saveAllAirports(airports));
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<Airport> update(@PathVariable Long id, @RequestBody Airport airport) {
-        Optional<Airport> existingAirport = airportService.findById(id);
-        if (existingAirport.isPresent()) {
-            airport.setId(id);
-            return ResponseEntity.ok(airportService.save(airport));
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+        return airportService.findById(id)
+                .map(existing -> {
+                    airport.setId(id);
+                    return ResponseEntity.ok(airportService.save(airport));
+                })
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
-        Optional<Airport> airport = airportService.findById(id);
-        if (airport.isPresent()) {
-            airportService.delete(airport.get());
-            return ResponseEntity.noContent().build();
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+        return airportService.findById(id)
+                .map(airport -> {
+                    airportService.delete(airport);
+                    return ResponseEntity.noContent().<Void>build();
+                })
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 }

@@ -19,12 +19,10 @@ public class PlaneController {
     @Autowired
     private PlaneService planeService;
 
-    // Get all planes, returning PlaneDTO objects
     @GetMapping
     public List<PlaneDTO> findAll() {
         List<Plane> planes = planeService.findAll();
 
-        // Map the Plane objects to PlaneDTO
         return planes.stream().map(plane -> {
             String flightNumber = null;
             if (plane.getFlights() != null && !plane.getFlights().isEmpty()) {
@@ -43,7 +41,6 @@ public class PlaneController {
         }).collect(Collectors.toList());
     }
 
-    // Get a specific plane by ID, returning PlaneDTO
     @GetMapping("/{id}")
     public ResponseEntity<Plane> findById(@PathVariable Long id) {
         Optional<Plane> plane = planeService.findById(id);
@@ -54,14 +51,12 @@ public class PlaneController {
         }
     }
 
-    // Create a new plane, but we'll return the PlaneDTO in response
     @PostMapping
     public ResponseEntity<Plane> create(@RequestBody Plane plane) {
         Plane planeDTO = planeService.save(plane); // Saving the plane and returning the DTO
         return ResponseEntity.ok(planeDTO);
     }
 
-    // Update a plane by ID, returning the updated PlaneDTO
     @PutMapping("/{id}")
     public ResponseEntity<Plane> update(@PathVariable Long id, @RequestBody Plane plane) {
         Optional<Plane> existingPlane = planeService.findById(id);
@@ -74,7 +69,11 @@ public class PlaneController {
         }
     }
 
-    // Delete a plane by ID
+    @PostMapping("/batch")
+    public ResponseEntity<List<Plane>> createPlanes(@RequestBody List<Plane> planes) {
+        return ResponseEntity.ok(planeService.saveAllPlanes(planes));
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         Optional<Plane> plane = planeService.findById(id);
