@@ -1,13 +1,355 @@
 POST https://localhost:8081/api/planes
 Content-Type: application/json
 
-{
-  "uuid": "{{$random.uuid}}",
-  "desc": "{{$random.alphabetic(10)}}",
-  "desc1": "{{$random.alphanumeric(10)}}",
-  "desc2": "{{$random.numeric(10)}}",
-  "base64": "{{$imageToBase64(E:\\image\\test.jpg)}}",
-  "value": "content",
-  "ts": "{{$timestamp}}",
-  "price2": {{$randomInt}}
-}
+[
+  {
+    "model": "Boeing 737",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N737AA",
+    "capacity": 180,
+    "yearOfManufacture": 2018
+  },
+  {
+    "model": "Airbus A320",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N320DL",
+    "capacity": 150,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "Boeing 787",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N787BA",
+    "capacity": 250,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "Airbus A350",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N350UA",
+    "capacity": 300,
+    "yearOfManufacture": 2021
+  },
+  {
+    "model": "Boeing 747",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N747LH",
+    "capacity": 400,
+    "yearOfManufacture": 2017
+  },
+  {
+    "model": "Airbus A330",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N330AF",
+    "capacity": 250,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "Boeing 767",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N767EK",
+    "capacity": 250,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "Airbus A380",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N380QR",
+    "capacity": 500,
+    "yearOfManufacture": 2022
+  },
+  {
+    "model": "Boeing 757",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N757SQ",
+    "capacity": 200,
+    "yearOfManufacture": 2018
+  },
+  {
+    "model": "Airbus A321",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N321JL",
+    "capacity": 230,
+    "yearOfManufacture": 2021
+  },
+  {
+    "model": "Boeing 737",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N737AA2",
+    "capacity": 180,
+    "yearOfManufacture": 2018
+  },
+  {
+    "model": "Airbus A320",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N320DL2",
+    "capacity": 150,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "Boeing 787",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N787BA2",
+    "capacity": 250,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "Airbus A350",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N350UA2",
+    "capacity": 300,
+    "yearOfManufacture": 2021
+  },
+  {
+    "model": "Boeing 747",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N747LH2",
+    "capacity": 400,
+    "yearOfManufacture": 2017
+  },
+  {
+    "model": "Airbus A330",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N330AF2",
+    "capacity": 250,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "Boeing 767",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N767EK2",
+    "capacity": 250,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "Airbus A380",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N380QR2",
+    "capacity": 500,
+    "yearOfManufacture": 2022
+  },
+  {
+    "model": "Boeing 757",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N757SQ2",
+    "capacity": 200,
+    "yearOfManufacture": 2018
+  },
+  {
+    "model": "Airbus A321",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N321JL2",
+    "capacity": 230,
+    "yearOfManufacture": 2021
+  },
+  {
+    "model": "Boeing 737",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N737AA3",
+    "capacity": 180,
+    "yearOfManufacture": 2018
+  },
+  {
+    "model": "Airbus A320",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N320DL3",
+    "capacity": 150,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "Boeing 787",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N787BA3",
+    "capacity": 250,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "Airbus A350",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N350UA3",
+    "capacity": 300,
+    "yearOfManufacture": 2021
+  },
+  {
+    "model": "Boeing 747",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N747LH3",
+    "capacity": 400,
+    "yearOfManufacture": 2017
+  },
+  {
+    "model": "Airbus A330",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N330AF3",
+    "capacity": 250,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "Boeing 767",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N767EK3",
+    "capacity": 250,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "Airbus A380",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N380QR3",
+    "capacity": 500,
+    "yearOfManufacture": 2022
+  },
+  {
+    "model": "Boeing 757",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N757SQ3",
+    "capacity": 200,
+    "yearOfManufacture": 2018
+  },
+  {
+    "model": "Airbus A321",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N321JL3",
+    "capacity": 230,
+    "yearOfManufacture": 2021
+  },
+  {
+    "model": "Boeing 737",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N737AA4",
+    "capacity": 180,
+    "yearOfManufacture": 2018
+  },
+  {
+    "model": "Airbus A320",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N320DL4",
+    "capacity": 150,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "Boeing 787",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N787BA4",
+    "capacity": 250,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "Airbus A350",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N350UA4",
+    "capacity": 300,
+    "yearOfManufacture": 2021
+  },
+  {
+    "model": "Boeing 747",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N747LH4",
+    "capacity": 400,
+    "yearOfManufacture": 2017
+  },
+  {
+    "model": "Airbus A330",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N330AF4",
+    "capacity": 250,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "Boeing 767",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N767EK4",
+    "capacity": 250,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "Airbus A380",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N380QR4",
+    "capacity": 500,
+    "yearOfManufacture": 2022
+  },
+  {
+    "model": "Boeing 757",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N757SQ4",
+    "capacity": 200,
+    "yearOfManufacture": 2018
+  },
+  {
+    "model": "Airbus A321",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N321JL4",
+    "capacity": 230,
+    "yearOfManufacture": 2021
+  },
+  {
+    "model": "Boeing 737",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N737AA5",
+    "capacity": 180,
+    "yearOfManufacture": 2018
+  },
+  {
+    "model": "Airbus A320",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N320DL5",
+    "capacity": 150,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "Boeing 787",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N787BA5",
+    "capacity": 250,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "Airbus A350",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N350UA5",
+    "capacity": 300,
+    "yearOfManufacture": 2021
+  },
+  {
+    "model": "Boeing 747",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N747LH5",
+    "capacity": 400,
+    "yearOfManufacture": 2017
+  },
+  {
+    "model": "Airbus A330",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N330AF5",
+    "capacity": 250,
+    "yearOfManufacture": 2019
+  },
+  {
+    "model": "Boeing 767",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N767EK5",
+    "capacity": 250,
+    "yearOfManufacture": 2020
+  },
+  {
+    "model": "Airbus A380",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N380QR5",
+    "capacity": 500,
+    "yearOfManufacture": 2022
+  },
+  {
+    "model": "Boeing 757",
+    "manufacturer": "Boeing",
+    "registrationNumber": "N757SQ5",
+    "capacity": 200,
+    "yearOfManufacture": 2018
+  },
+  {
+    "model": "Airbus A321",
+    "manufacturer": "Airbus",
+    "registrationNumber": "N321JL5",
+    "capacity": 230,
+    "yearOfManufacture": 2021
+  }
+]

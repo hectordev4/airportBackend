@@ -1,13 +1,165 @@
 POST https://localhost:8081/api/airports
 Content-Type: application/json
 
-{
-  "uuid": "{{$random.uuid}}",
-  "desc": "{{$random.alphabetic(10)}}",
-  "desc1": "{{$random.alphanumeric(10)}}",
-  "desc2": "{{$random.numeric(10)}}",
-  "base64": "{{$imageToBase64(E:\\image\\test.jpg)}}",
-  "value": "content",
-  "ts": "{{$timestamp}}",
-  "price2": {{$randomInt}}
-}
+[
+  {
+    "city": "New York",
+    "country": "USA",
+    "name": "John F. Kennedy International Airport",
+    "code": "JFK",
+    "phone_number": "+1 718-244-4444",
+    "email": "info@jfkairport.com"
+  },
+  {
+    "city": "Los Angeles",
+    "country": "USA",
+    "name": "Los Angeles International Airport",
+    "code": "LAX",
+    "phone_number": "+1 855-463-5252",
+    "email": "contact@laxairport.com"
+  },
+  {
+    "city": "London",
+    "country": "UK",
+    "name": "Heathrow Airport",
+    "code": "LHR",
+    "phone_number": "+44 844 335 1801",
+    "email": "info@heathrow.com"
+  },
+  {
+    "city": "Paris",
+    "country": "France",
+    "name": "Charles de Gaulle Airport",
+    "code": "CDG",
+    "phone_number": "+33 1 70 36 39 50",
+    "email": "contact@cdgairport.fr"
+  },
+  {
+    "city": "Tokyo",
+    "country": "Japan",
+    "name": "Narita International Airport",
+    "code": "NRT",
+    "phone_number": "+81 476-34-8000",
+    "email": "info@narita-airport.jp"
+  },
+  {
+    "city": "Sydney",
+    "country": "Australia",
+    "name": "Sydney Kingsford Smith Airport",
+    "code": "SYD",
+    "phone_number": "+61 2 9667 9111",
+    "email": "contact@sydneyairport.com.au"
+  },
+  {
+    "city": "Dubai",
+    "country": "UAE",
+    "name": "Dubai International Airport",
+    "code": "DXB",
+    "phone_number": "+971 4 224 5555",
+    "email": "info@dubaiairports.ae"
+  },
+  {
+    "city": "Hong Kong",
+    "country": "China",
+    "name": "Hong Kong International Airport",
+    "code": "HKG",
+    "phone_number": "+852 2181 8888",
+    "email": "enquiry@hkairport.com"
+  },
+  {
+    "city": "Berlin",
+    "country": "Germany",
+    "name": "Berlin Brandenburg Airport",
+    "code": "BER",
+    "phone_number": "+49 30 609160910",
+    "email": "info@berlin-airport.de"
+  },
+  {
+    "city": "Singapore",
+    "country": "Singapore",
+    "name": "Changi Airport",
+    "code": "SIN",
+    "phone_number": "+65 6595 6868",
+    "email": "enquiries@changiairport.com"
+  },
+  {
+    "city": "Madrid",
+    "country": "Spain",
+    "name": "Adolfo Suárez Madrid–Barajas Airport",
+    "code": "MAD",
+    "phone_number": "+34 913 211 000",
+    "email": "info@madrid-airport.es"
+  },
+  {
+    "city": "Rome",
+    "country": "Italy",
+    "name": "Leonardo da Vinci–Fiumicino Airport",
+    "code": "FCO",
+    "phone_number": "+39 06 65951",
+    "email": "contact@fco.it"
+  },
+  {
+    "city": "Toronto",
+    "country": "Canada",
+    "name": "Toronto Pearson International Airport",
+    "code": "YYZ",
+    "phone_number": "+1 416-247-7678",
+    "email": "info@gtaa.com"
+  },
+  {
+    "city": "Beijing",
+    "country": "China",
+    "name": "Beijing Capital International Airport",
+    "code": "PEK",
+    "phone_number": "+86 10 96158",
+    "email": "service@bcia.com.cn"
+  },
+  {
+    "city": "Mexico City",
+    "country": "Mexico",
+    "name": "Mexico City International Airport",
+    "code": "MEX",
+    "phone_number": "+52 55 2482 2400",
+    "email": "contact@aicm.com.mx"
+  },
+  {
+    "city": "São Paulo",
+    "country": "Brazil",
+    "name": "São Paulo–Guarulhos International Airport",
+    "code": "GRU",
+    "phone_number": "+55 11 2445-2945",
+    "email": "info@gru.com.br"
+  },
+  {
+    "city": "Istanbul",
+    "country": "Turkey",
+    "name": "Istanbul Airport",
+    "code": "IST",
+    "phone_number": "+90 212 444 1442",
+    "email": "info@istairport.com"
+  },
+  {
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "name": "Amsterdam Schiphol Airport",
+    "code": "AMS",
+    "phone_number": "+31 20 794 0800",
+    "email": "info@schiphol.nl"
+  },
+  {
+    "city": "Seoul",
+    "country": "South Korea",
+    "name": "Incheon International Airport",
+    "code": "ICN",
+    "phone_number": "+82 32-741-0114",
+    "email": "contact@airport.kr"
+  },
+  {
+    "city": "Bangkok",
+    "country": "Thailand",
+    "name": "Suvarnabhumi Airport",
+    "code": "BKK",
+    "phone_number": "+66 2132 1888",
+    "email": "info@airportthai.co.th"
+  }
+]
