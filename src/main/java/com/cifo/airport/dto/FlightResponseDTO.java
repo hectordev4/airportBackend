@@ -5,14 +5,13 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class FlightDTO {
+public class FlightResponseDTO {
     private Long id;
     private String flightNumber;
     private String departureTime;
     private String arrivalTime;
     private String status;
-    private String departureAirportCode;
-    private String arrivalAirportCode;
+    private String departureAirportCode;  // ← Human-friendly codes
+    private String arrivalAirportCode;    // ← Human-friendly codes
     private String planeRegistrationNumber;
-
 }

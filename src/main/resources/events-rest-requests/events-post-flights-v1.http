@@ -3,282 +3,453 @@ Content-Type: application/json
 
 [
   {
-    "arrivalTime": "2025-03-28 08:30:00",
-    "departureTime": "2025-03-28 06:00:00",
     "flightNumber": "AA101",
+    "departureTime": "2025-03-28 06:00:00",
+    "arrivalTime": "2025-03-28 08:30:00",
     "status": "ON_TIME",
     "departureAirportId": 5,
     "arrivalAirportId": 12,
-    "planeId": 101
+    "planeId": 1
   },
   {
-    "arrivalTime": "2025-03-28 09:45:00",
-    "departureTime": "2025-03-28 07:15:00",
     "flightNumber": "DL202",
+    "departureTime": "2025-03-28 07:15:00",
+    "arrivalTime": "2025-03-28 09:45:00",
     "status": "DELAYED",
     "departureAirportId": 8,
     "arrivalAirportId": 1,
-    "planeId": 102
+    "planeId": 2
   },
   {
-    "arrivalTime": "2025-03-28 10:00:00",
-    "departureTime": "2025-03-28 07:30:00",
     "flightNumber": "BA303",
+    "departureTime": "2025-03-28 07:30:00",
+    "arrivalTime": "2025-03-28 10:00:00",
     "status": "CANCELLED",
     "departureAirportId": 3,
     "arrivalAirportId": 15,
-    "planeId": 103
+    "planeId": 3
   },
   {
-    "arrivalTime": "2025-03-28 11:15:00",
-    "departureTime": "2025-03-28 08:45:00",
     "flightNumber": "UA404",
+    "departureTime": "2025-03-28 08:45:00",
+    "arrivalTime": "2025-03-28 11:15:00",
     "status": "ON_TIME",
     "departureAirportId": 6,
     "arrivalAirportId": 19,
-    "planeId": 104
+    "planeId": 4
   },
   {
-    "arrivalTime": "2025-03-28 12:20:00",
-    "departureTime": "2025-03-28 09:50:00",
     "flightNumber": "LH505",
+    "departureTime": "2025-03-28 09:50:00",
+    "arrivalTime": "2025-03-28 12:20:00",
     "status": "ON_TIME",
     "departureAirportId": 10,
     "arrivalAirportId": 13,
-    "planeId": 105
+    "planeId": 5
   },
   {
-    "arrivalTime": "2025-03-28 13:10:00",
-    "departureTime": "2025-03-28 10:40:00",
     "flightNumber": "AF606",
+    "departureTime": "2025-03-28 10:40:00",
+    "arrivalTime": "2025-03-28 13:10:00",
     "status": "DELAYED",
     "departureAirportId": 11,
     "arrivalAirportId": 16,
-    "planeId": 106
+    "planeId": 6
   },
   {
-    "arrivalTime": "2025-03-28 14:35:00",
-    "departureTime": "2025-03-28 12:05:00",
     "flightNumber": "EK707",
+    "departureTime": "2025-03-28 12:05:00",
+    "arrivalTime": "2025-03-28 14:35:00",
     "status": "ON_TIME",
     "departureAirportId": 14,
     "arrivalAirportId": 18,
-    "planeId": 107
+    "planeId": 7
   },
   {
-    "arrivalTime": "2025-03-28 15:50:00",
-    "departureTime": "2025-03-28 13:20:00",
     "flightNumber": "QR808",
+    "departureTime": "2025-03-28 13:20:00",
+    "arrivalTime": "2025-03-28 15:50:00",
     "status": "CANCELLED",
     "departureAirportId": 2,
     "arrivalAirportId": 9,
-    "planeId": 108
+    "planeId": 8
   },
   {
-    "arrivalTime": "2025-03-28 16:25:00",
-    "departureTime": "2025-03-28 13:55:00",
     "flightNumber": "SQ909",
+    "departureTime": "2025-03-28 13:55:00",
+    "arrivalTime": "2025-03-28 16:25:00",
     "status": "ON_TIME",
     "departureAirportId": 17,
     "arrivalAirportId": 4,
-    "planeId": 109
+    "planeId": 9
   },
   {
-    "arrivalTime": "2025-03-28 17:40:00",
-    "departureTime": "2025-03-28 15:10:00",
     "flightNumber": "JL010",
+    "departureTime": "2025-03-28 15:10:00",
+    "arrivalTime": "2025-03-28 17:40:00",
     "status": "DELAYED",
     "departureAirportId": 7,
     "arrivalAirportId": 11,
-    "planeId": 110
+    "planeId": 10
   },
   {
-    "arrivalTime": "2025-03-28 18:55:00",
-    "departureTime": "2025-03-28 16:25:00",
     "flightNumber": "AA111",
+    "departureTime": "2025-03-28 16:25:00",
+    "arrivalTime": "2025-03-28 18:55:00",
     "status": "ON_TIME",
     "departureAirportId": 5,
     "arrivalAirportId": 1,
-    "planeId": 111
+    "planeId": 11
   },
   {
-    "arrivalTime": "2025-03-28 19:30:00",
-    "departureTime": "2025-03-28 17:00:00",
     "flightNumber": "DL212",
+    "departureTime": "2025-03-28 17:00:00",
+    "arrivalTime": "2025-03-28 19:30:00",
     "status": "DELAYED",
     "departureAirportId": 19,
     "arrivalAirportId": 13,
-    "planeId": 112
+    "planeId": 12
   },
   {
-    "arrivalTime": "2025-03-28 20:45:00",
-    "departureTime": "2025-03-28 18:15:00",
     "flightNumber": "BA313",
+    "departureTime": "2025-03-28 18:15:00",
+    "arrivalTime": "2025-03-28 20:45:00",
     "status": "ON_TIME",
     "departureAirportId": 3,
     "arrivalAirportId": 9,
-    "planeId": 113
+    "planeId": 13
   },
   {
-    "arrivalTime": "2025-03-28 21:15:00",
-    "departureTime": "2025-03-28 18:45:00",
     "flightNumber": "UA414",
+    "departureTime": "2025-03-28 18:45:00",
+    "arrivalTime": "2025-03-28 21:15:00",
     "status": "CANCELLED",
     "departureAirportId": 6,
     "arrivalAirportId": 7,
-    "planeId": 114
+    "planeId": 14
   },
   {
-    "arrivalTime": "2025-03-28 22:20:00",
-    "departureTime": "2025-03-28 19:50:00",
     "flightNumber": "LH525",
+    "departureTime": "2025-03-28 19:50:00",
+    "arrivalTime": "2025-03-28 22:20:00",
     "status": "ON_TIME",
     "departureAirportId": 10,
     "arrivalAirportId": 15,
-    "planeId": 115
+    "planeId": 15
   },
   {
-    "arrivalTime": "2025-03-28 23:10:00",
-    "departureTime": "2025-03-28 20:40:00",
     "flightNumber": "AF626",
+    "departureTime": "2025-03-28 20:40:00",
+    "arrivalTime": "2025-03-28 23:10:00",
     "status": "DELAYED",
     "departureAirportId": 16,
     "arrivalAirportId": 12,
-    "planeId": 116
+    "planeId": 16
   },
   {
-    "arrivalTime": "2025-03-29 00:35:00",
-    "departureTime": "2025-03-28 22:05:00",
     "flightNumber": "EK727",
+    "departureTime": "2025-03-28 22:05:00",
+    "arrivalTime": "2025-03-29 00:35:00",
     "status": "ON_TIME",
     "departureAirportId": 14,
     "arrivalAirportId": 19,
-    "planeId": 117
+    "planeId": 17
   },
   {
-    "arrivalTime": "2025-03-29 01:50:00",
-    "departureTime": "2025-03-28 23:20:00",
     "flightNumber": "QR818",
+    "departureTime": "2025-03-28 23:20:00",
+    "arrivalTime": "2025-03-29 01:50:00",
     "status": "CANCELLED",
     "departureAirportId": 18,
     "arrivalAirportId": 13,
-    "planeId": 118
+    "planeId": 18
   },
   {
-    "arrivalTime": "2025-03-29 02:25:00",
-    "departureTime": "2025-03-28 23:55:00",
     "flightNumber": "SQ919",
+    "departureTime": "2025-03-28 23:55:00",
+    "arrivalTime": "2025-03-29 02:25:00",
     "status": "ON_TIME",
     "departureAirportId": 9,
     "arrivalAirportId": 10,
-    "planeId": 119
+    "planeId": 19
   },
   {
-    "arrivalTime": "2025-03-29 03:40:00",
-    "departureTime": "2025-03-29 01:10:00",
     "flightNumber": "JL020",
+    "departureTime": "2025-03-29 01:10:00",
+    "arrivalTime": "2025-03-29 03:40:00",
     "status": "DELAYED",
     "departureAirportId": 1,
     "arrivalAirportId": 3,
-    "planeId": 120
+    "planeId": 20
   },
   {
-    "arrivalTime": "2025-03-29 04:55:00",
-    "departureTime": "2025-03-29 02:25:00",
     "flightNumber": "AA121",
+    "departureTime": "2025-03-29 02:25:00",
+    "arrivalTime": "2025-03-29 04:55:00",
     "status": "ON_TIME",
     "departureAirportId": 17,
     "arrivalAirportId": 5,
-    "planeId": 121
+    "planeId": 21
   },
   {
-    "arrivalTime": "2025-03-29 05:30:00",
-    "departureTime": "2025-03-29 03:00:00",
     "flightNumber": "DL222",
+    "departureTime": "2025-03-29 03:00:00",
+    "arrivalTime": "2025-03-29 05:30:00",
     "status": "DELAYED",
     "departureAirportId": 15,
     "arrivalAirportId": 2,
-    "planeId": 122
+    "planeId": 22
   },
   {
-    "arrivalTime": "2025-03-29 06:45:00",
-    "departureTime": "2025-03-29 04:15:00",
     "flightNumber": "BA323",
+    "departureTime": "2025-03-29 04:15:00",
+    "arrivalTime": "2025-03-29 06:45:00",
     "status": "ON_TIME",
     "departureAirportId": 3,
     "arrivalAirportId": 6,
-    "planeId": 123
+    "planeId": 23
   },
   {
-    "arrivalTime": "2025-03-29 07:15:00",
-    "departureTime": "2025-03-29 04:45:00",
     "flightNumber": "UA424",
+    "departureTime": "2025-03-29 04:45:00",
+    "arrivalTime": "2025-03-29 07:15:00",
     "status": "CANCELLED",
     "departureAirportId": 7,
     "arrivalAirportId": 8,
-    "planeId": 124
+    "planeId": 24
   },
   {
-    "arrivalTime": "2025-03-29 08:20:00",
-    "departureTime": "2025-03-29 05:50:00",
     "flightNumber": "LH535",
+    "departureTime": "2025-03-29 05:50:00",
+    "arrivalTime": "2025-03-29 08:20:00",
     "status": "ON_TIME",
     "departureAirportId": 13,
     "arrivalAirportId": 11,
-    "planeId": 125
+    "planeId": 25
   },
   {
-    "arrivalTime": "2025-03-29 09:10:00",
-    "departureTime": "2025-03-29 06:40:00",
     "flightNumber": "AF636",
+    "departureTime": "2025-03-29 06:40:00",
+    "arrivalTime": "2025-03-29 09:10:00",
     "status": "DELAYED",
     "departureAirportId": 12,
     "arrivalAirportId": 16,
-    "planeId": 126
+    "planeId": 26
   },
   {
-    "arrivalTime": "2025-03-29 10:35:00",
-    "departureTime": "2025-03-29 08:05:00",
     "flightNumber": "EK747",
+    "departureTime": "2025-03-29 08:05:00",
+    "arrivalTime": "2025-03-29 10:35:00",
     "status": "ON_TIME",
     "departureAirportId": 18,
     "arrivalAirportId": 1,
-    "planeId": 127
+    "planeId": 27
   },
   {
-    "arrivalTime": "2025-03-29 11:50:00",
-    "departureTime": "2025-03-29 09:20:00",
     "flightNumber": "QR828",
+    "departureTime": "2025-03-29 09:20:00",
+    "arrivalTime": "2025-03-29 11:50:00",
     "status": "CANCELLED",
     "departureAirportId": 5,
     "arrivalAirportId": 19,
-    "planeId": 128
+    "planeId": 28
   },
   {
-    "arrivalTime": "2025-03-29 12:25:00",
-    "departureTime": "2025-03-29 09:55:00",
     "flightNumber": "SQ929",
+    "departureTime": "2025-03-29 09:55:00",
+    "arrivalTime": "2025-03-29 12:25:00",
     "status": "ON_TIME",
     "departureAirportId": 3,
     "arrivalAirportId": 14,
-    "planeId": 129
+    "planeId": 29
   },
   {
-    "arrivalTime": "2025-03-29 13:40:00",
-    "departureTime": "2025-03-29 11:10:00",
     "flightNumber": "JL030",
+    "departureTime": "2025-03-29 11:10:00",
+    "arrivalTime": "2025-03-29 13:40:00",
     "status": "DELAYED",
     "departureAirportId": 9,
     "arrivalAirportId": 2,
-    "planeId": 130
+    "planeId": 30
   },
   {
-    "arrivalTime": "2025-03-29 14:55:00",
-    "departureTime": "2025-03-29 12:25:00",
     "flightNumber": "AA131",
+    "departureTime": "2025-03-29 12:25:00",
+    "arrivalTime": "2025-03-29 14:55:00",
     "status": "ON_TIME",
     "departureAirportId": 20,
     "arrivalAirportId": 4,
-    "planeId": 131
+    "planeId": 31
+  },
+  {
+    "flightNumber": "DL232",
+    "departureTime": "2025-03-29 13:00:00",
+    "arrivalTime": "2025-03-29 15:30:00",
+    "status": "DELAYED",
+    "departureAirportId": 14,
+    "arrivalAirportId": 7,
+    "planeId": 32
+  },
+  {
+    "flightNumber": "BA333",
+    "departureTime": "2025-03-29 14:15:00",
+    "arrivalTime": "2025-03-29 16:45:00",
+    "status": "ON_TIME",
+    "departureAirportId": 13,
+    "arrivalAirportId": 16,
+    "planeId": 33
+  },
+  {
+    "flightNumber": "UA434",
+    "departureTime": "2025-03-29 14:45:00",
+    "arrivalTime": "2025-03-29 17:15:00",
+    "status": "CANCELLED",
+    "departureAirportId": 8,
+    "arrivalAirportId": 1,
+    "planeId": 34
+  },
+  {
+    "flightNumber": "LH545",
+    "departureTime": "2025-03-29 15:50:00",
+    "arrivalTime": "2025-03-29 18:20:00",
+    "status": "ON_TIME",
+    "departureAirportId": 6,
+    "arrivalAirportId": 19,
+    "planeId": 35
+  },
+  {
+    "flightNumber": "AF646",
+    "departureTime": "2025-03-29 16:40:00",
+    "arrivalTime": "2025-03-29 19:10:00",
+    "status": "DELAYED",
+    "departureAirportId": 5,
+    "arrivalAirportId": 9,
+    "planeId": 36
+  },
+  {
+    "flightNumber": "EK757",
+    "departureTime": "2025-03-29 18:05:00",
+    "arrivalTime": "2025-03-29 20:35:00",
+    "status": "ON_TIME",
+    "departureAirportId": 3,
+    "arrivalAirportId": 18,
+    "planeId": 37
+  },
+  {
+    "flightNumber": "QR838",
+    "departureTime": "2025-03-29 19:20:00",
+    "arrivalTime": "2025-03-29 21:50:00",
+    "status": "CANCELLED",
+    "departureAirportId": 1,
+    "arrivalAirportId": 14,
+    "planeId": 38
+  },
+  {
+    "flightNumber": "SQ939",
+    "departureTime": "2025-03-29 19:55:00",
+    "arrivalTime": "2025-03-29 22:25:00",
+    "status": "ON_TIME",
+    "departureAirportId": 12,
+    "arrivalAirportId": 5,
+    "planeId": 39
+  },
+  {
+    "flightNumber": "JL040",
+    "departureTime": "2025-03-29 21:10:00",
+    "arrivalTime": "2025-03-29 23:40:00",
+    "status": "DELAYED",
+    "departureAirportId": 8,
+    "arrivalAirportId": 6,
+    "planeId": 40
+  },
+  {
+    "flightNumber": "AA141",
+    "departureTime": "2025-03-29 22:25:00",
+    "arrivalTime": "2025-03-30 00:55:00",
+    "status": "ON_TIME",
+    "departureAirportId": 7,
+    "arrivalAirportId": 19,
+    "planeId": 41
+  },
+  {
+    "flightNumber": "DL242",
+    "departureTime": "2025-03-30 23:00:00",
+    "arrivalTime": "2025-03-30 01:30:00",
+    "status": "DELAYED",
+    "departureAirportId": 15,
+    "arrivalAirportId": 13,
+    "planeId": 42
+  },
+  {
+    "flightNumber": "BA343",
+    "departureTime": "2025-03-30 00:15:00",
+    "arrivalTime": "2025-03-30 02:45:00",
+    "status": "ON_TIME",
+    "departureAirportId": 17,
+    "arrivalAirportId": 14,
+    "planeId": 43
+  },
+  {
+    "flightNumber": "UA444",
+    "departureTime": "2025-03-30 00:45:00",
+    "arrivalTime": "2025-03-30 03:15:00",
+    "status": "CANCELLED",
+    "departureAirportId": 16,
+    "arrivalAirportId": 1,
+    "planeId": 44
+  },
+  {
+    "flightNumber": "LH555",
+    "departureTime": "2025-03-30 01:50:00",
+    "arrivalTime": "2025-03-30 04:20:00",
+    "status": "ON_TIME",
+    "departureAirportId": 19,
+    "arrivalAirportId": 3,
+    "planeId": 45
+  },
+  {
+    "flightNumber": "AF656",
+    "departureTime": "2025-03-30 02:40:00",
+    "arrivalTime": "2025-03-30 05:10:00",
+    "status": "DELAYED",
+    "departureAirportId": 14,
+    "arrivalAirportId": 2,
+    "planeId": 46
+  },
+  {
+    "flightNumber": "EK767",
+    "departureTime": "2025-03-30 04:05:00",
+    "arrivalTime": "2025-03-30 06:35:00",
+    "status": "ON_TIME",
+    "departureAirportId": 13,
+    "arrivalAirportId": 18,
+    "planeId": 47
+  },
+  {
+    "flightNumber": "QR848",
+    "departureTime": "2025-03-30 05:20:00",
+    "arrivalTime": "2025-03-30 07:50:00",
+    "status": "CANCELLED",
+    "departureAirportId": 6,
+    "arrivalAirportId": 17,
+    "planeId": 48
+  },
+  {
+    "flightNumber": "SQ949",
+    "departureTime": "2025-03-30 05:55:00",
+    "arrivalTime": "2025-03-30 08:25:00",
+    "status": "ON_TIME",
+    "departureAirportId": 9,
+    "arrivalAirportId": 20,
+    "planeId": 49
+  },
+  {
+    "flightNumber": "JL050",
+    "departureTime": "2025-03-30 07:10:00",
+    "arrivalTime": "2025-03-30 09:40:00",
+    "status": "DELAYED",
+    "departureAirportId": 4,
+    "arrivalAirportId": 8,
+    "planeId": 50
   }
 ]
