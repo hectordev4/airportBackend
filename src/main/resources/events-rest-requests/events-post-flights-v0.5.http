@@ -1,4 +1,4 @@
-POST https://localhost:8081/api/flights
+POST http://localhost:8081/api/flights/batch
 Content-Type: application/json
 
 [
