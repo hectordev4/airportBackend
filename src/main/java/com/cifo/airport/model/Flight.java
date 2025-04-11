@@ -19,7 +19,6 @@ public class Flight {
     @SequenceGenerator(
             name = "flight_seq",
             sequenceName = "flight_sequence",
-            initialValue = 1,
             allocationSize = 1
     )
     private Long id;

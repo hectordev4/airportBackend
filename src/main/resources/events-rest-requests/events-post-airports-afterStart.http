@@ -1,0 +1,167 @@
+//Before this action you need to delete the data.sql file in the resources folder in case you shutdown the application and start it again.
+
+POST http://localhost:8081/api/airports/batch
+Content-Type: application/json
+
+[
+  {
+    "city": "Chicago",
+    "country": "USA",
+    "name": "O'Hare International Airport",
+    "code": "ORD",
+    "phone_number": "+1 773-686-2200",
+    "email": "info@flychicago.com"
+  },
+  {
+    "city": "Miami",
+    "country": "USA",
+    "name": "Miami International Airport",
+    "code": "MIA",
+    "phone_number": "+1 305-876-7000",
+    "email": "info@miami-airport.com"
+  },
+  {
+    "city": "San Francisco",
+    "country": "USA",
+    "name": "San Francisco International Airport",
+    "code": "SFO",
+    "phone_number": "+1 650-821-8211",
+    "email": "customer_service@flysfo.com"
+  },
+  {
+    "city": "Boston",
+    "country": "USA",
+    "name": "Logan International Airport",
+    "code": "BOS",
+    "phone_number": "+1 800-235-6426",
+    "email": "info@massport.com"
+  },
+  {
+    "city": "Atlanta",
+    "country": "USA",
+    "name": "Hartsfield-Jackson Atlanta International Airport",
+    "code": "ATL",
+    "phone_number": "+1 404-382-6654",
+    "email": "customer.service@atl.com"
+  },
+  {
+    "city": "Vancouver",
+    "country": "Canada",
+    "name": "Vancouver International Airport",
+    "code": "YVR",
+    "phone_number": "+1 604-207-7077",
+    "email": "info@yvr.ca"
+  },
+  {
+    "city": "Montreal",
+    "country": "Canada",
+    "name": "Montréal-Trudeau International Airport",
+    "code": "YUL",
+    "phone_number": "+1 514-394-7377",
+    "email": "info@admtl.com"
+  },
+  {
+    "city": "Buenos Aires",
+    "country": "Argentina",
+    "name": "Ministro Pistarini International Airport",
+    "code": "EZE",
+    "phone_number": "+54 11 5480-6111",
+    "email": "contacto@aa2000.com.ar"
+  },
+  {
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "name": "Rio de Janeiro-Galeão International Airport",
+    "code": "GIG",
+    "phone_number": "+55 21 3004-6050",
+    "email": "sac@galeao.com.br"
+  },
+  {
+    "city": "Santiago",
+    "country": "Chile",
+    "name": "Arturo Merino Benítez International Airport",
+    "code": "SCL",
+    "phone_number": "+56 2 2690-1796",
+    "email": "contacto@nuevopudahuel.cl"
+  },
+  {
+    "city": "Lima",
+    "country": "Peru",
+    "name": "Jorge Chávez International Airport",
+    "code": "LIM",
+    "phone_number": "+51 1 517-3100",
+    "email": "informes@limaairport.com"
+  },
+  {
+    "city": "Bogotá",
+    "country": "Colombia",
+    "name": "El Dorado International Airport",
+    "code": "BOG",
+    "phone_number": "+57 1 266-2000",
+    "email": "contactenos@elnuevodorado.com"
+  },
+  {
+    "city": "Cape Town",
+    "country": "South Africa",
+    "name": "Cape Town International Airport",
+    "code": "CPT",
+    "phone_number": "+27 21 937-1200",
+    "email": "info@airports.co.za"
+  },
+  {
+    "city": "Johannesburg",
+    "country": "South Africa",
+    "name": "O.R. Tambo International Airport",
+    "code": "JNB",
+    "phone_number": "+27 11 921-6262",
+    "email": "customer@ortambo-airport.com"
+  },
+  {
+    "city": "Cairo",
+    "country": "Egypt",
+    "name": "Cairo International Airport",
+    "code": "CAI",
+    "phone_number": "+20 2 2265-5000",
+    "email": "info@cairo-airport.com"
+  },
+  {
+    "city": "Casablanca",
+    "country": "Morocco",
+    "name": "Mohammed V International Airport",
+    "code": "CMN",
+    "phone_number": "+212 5225-39300",
+    "email": "contact@onda.ma"
+  },
+  {
+    "city": "Nairobi",
+    "country": "Kenya",
+    "name": "Jomo Kenyatta International Airport",
+    "code": "NBO",
+    "phone_number": "+254 20 682-1111",
+    "email": "info@kcaa.or.ke"
+  },
+  {
+    "city": "Mumbai",
+    "country": "India",
+    "name": "Chhatrapati Shivaji Maharaj International Airport",
+    "code": "BOM",
+    "phone_number": "+91 22 6685-1010",
+    "email": "feedback@csia.in"
+  },
+  {
+    "city": "Delhi",
+    "country": "India",
+    "name": "Indira Gandhi International Airport",
+    "code": "DEL",
+    "phone_number": "+91 124 337-6000",
+    "email": "apd@delhiairport.com"
+  },
+  {
+    "city": "Jakarta",
+    "country": "Indonesia",
+    "name": "Soekarno-Hatta International Airport",
+    "code": "CGK",
+    "phone_number": "+62 21 550-5179",
+    "email": "contact.center@angkasapura2.co.id"
+  }
+]

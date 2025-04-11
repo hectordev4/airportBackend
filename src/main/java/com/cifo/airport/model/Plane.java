@@ -21,7 +21,6 @@ public class Plane {
     @SequenceGenerator(
             name = "plane_seq",
             sequenceName = "plane_sequence",
-            initialValue = 1,
             allocationSize = 1
     )
     private Long id;

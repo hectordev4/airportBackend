@@ -513,3 +513,21 @@ SELECT setval('airport_sequence', COALESCE((SELECT MAX(id) FROM airport), 1), fa
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
 	at com.cifo.airport.AirportApplication.main(AirportApplication.java:10)
+2025-04-11 11:10:37.355820+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AIRPORT" not found; SQL statement:
+SET @max_airport = (SELECT COALESCE(MAX(id)+1, 1) FROM airport) [42102-224]
+2025-04-11 11:11:44.309680+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AIRPORT" not found; SQL statement:
+ALTER SEQUENCE airport_sequence RESTART WITH (SELECT COALESCE(MAX(id)+1, 1) FROM airport) [42102-224]
+2025-04-11 11:12:07.464456+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AIRPORT" not found; SQL statement:
+ALTER SEQUENCE airport_sequence RESTART WITH (SELECT COALESCE(MAX(id)+1, 1) FROM airport) [42102-224]
+2025-04-11 11:13:13.916552+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AIRPORT" not found; SQL statement:
+ALTER SEQUENCE airport_sequence RESTART WITH (SELECT COALESCE(MAX(id)+1, 1) FROM airport) [42102-224]
+2025-04-11 11:33:34.633210+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AIRPORT" not found; SQL statement:
+ALTER SEQUENCE airport_sequence RESTART WITH (SELECT COALESCE(MAX(id)+1, 1) FROM airport) [42102-224]
+2025-04-11 11:34:47.532253+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "AIRPORT" not found; SQL statement:
+ALTER SEQUENCE airport_sequence RESTART WITH (SELECT COALESCE(MAX(id)+1, 1) FROM airport) [42102-224]

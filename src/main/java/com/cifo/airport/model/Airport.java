@@ -21,7 +21,6 @@ public class Airport {
     @SequenceGenerator(
             name = "airport_seq",
             sequenceName = "airport_sequence",
-            initialValue = 1,
             allocationSize = 1
     )
     private Long id;
